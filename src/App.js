@@ -11,8 +11,9 @@ function App() {
     // TODO: add pagination and use dynamic query parameters in query below
     try {
       const { data } = await axios.get(
-        `http://localhost:5003/products/products?limit=30&page=0`
+        `http://localhost:5003/products/products?limit=10&page=1`
       );
+      console.log({data});
       setProducts(data.data);
     } catch (error) {
       // TODO: error handling
